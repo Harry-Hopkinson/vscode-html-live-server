@@ -1,0 +1,19 @@
+{
+  "name": "vscode-html-live-server",
+  "version": "1.0.0",
+  "description": "A Live Server that Displays HTML Pages on a LocalHost with Live Changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harry-Hopkinson/vscode-html-live-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harry-Hopkinson/vscode-html-live-server/issues"
+  },
+  "homepage": "https://github.com/Harry-Hopkinson/vscode-html-live-server#readme"
+}
