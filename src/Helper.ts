@@ -13,19 +13,16 @@ export const isRelativePath = (pathUrl: string) => {
     return !path.isAbsolute(pathUrl);
 };
 
-
 export class Helper {
-
 
     public static testPathWithRoot(workSpacePath: string) {
 
         let rootPath: string;
 
-        // Test the path is actually exists or not
         const testPath = path.join(workSpacePath, Config.getRoot);
 
         let isNotOkay = !fs.existsSync(testPath);
-        if (!isNotOkay) { // means okay :)
+        if (!isNotOkay) {
             rootPath = testPath;
         }
         else {
@@ -40,15 +37,6 @@ export class Helper {
             rootPath
         };
     }
-
-    /**
-     * This function return the remaining path from root to target.
-     * e.g. : root is `c:\user\rootfolder\` and target is `c:\user\rootfolder\subfolder\index.html`
-     * then this function will return `subfolder\index.html` as html is a supported otherwise it will return null.
-     *
-     * @param rootPath
-     * @param targetPath
-     */
     public static getSubPath(rootPath: string, targetPath: string) {
 
         if (!Helper.IsSupportedFile(targetPath) || !targetPath.startsWith(rootPath)) {
@@ -57,23 +45,10 @@ export class Helper {
 
         return targetPath.substring(rootPath.length, targetPath.length);
     }
-
-    /**
-     * It returns true if file is supported. input can be in full file path or just filename with extension name.
-     * @param file: can be path/subpath/file.ts or file.ts
-     */
     public static IsSupportedFile(file: string): boolean {
         let ext = path.extname(file) || (file.startsWith('.') ? file : `.${file}`);
         return SUPPRORTED_EXT.indexOf(ext.toLowerCase()) > -1;
     }
-
-
-    /**
-     *
-     * @param rootPath
-     * @param workspacePath
-     * @param onTagMissedCallback
-     */
     public static generateParams(
         rootPath: string,
         workspacePath: string,
@@ -95,9 +70,6 @@ export class Helper {
         const https = Helper.getHttpsSetup();
 
         const mount = Config.getMount;
-        // In live-server mountPath is reslove by `path.resolve(process.cwd(), mountRule[1])`.
-        // but in vscode `process.cwd()` is the vscode extensions path.
-        // The correct path should be resolve by workspacePath.
         mount.forEach((mountRule: Array<any>) => {
             if (mountRule.length === 2 && mountRule[1]) {
                 mountRule[1] = path.resolve(workspacePath, mountRule[1]);
@@ -147,7 +119,7 @@ export class Helper {
             proxy[0].push(proxySetup.baseUri, proxySetup.proxyUri);
         }
         else {
-            proxy = null; // required to change the type [[]] to black array [].
+            proxy = null; 
         }
 
         return proxy;

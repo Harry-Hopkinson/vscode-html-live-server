@@ -18,8 +18,11 @@
   "homepage": "https://github.com/Harry-Hopkinson/vscode-html-live-server#readme",
   "dependencies": {
     "fs": "^0.0.1-security",
+    "http-shutdown": "^1.2.2",
+    "live-server": "^1.2.1",
     "path": "^0.12.7",
-    "vscode": "^1.1.37"
+    "vscode": "^1.1.37",
+    "vsls": "^1.0.4753"
   },
   "devDependencies": {
     "@types/node": "^17.0.5"
