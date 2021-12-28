@@ -29,6 +29,4 @@ suite('Extension Tests', () => {
             assert.equal(foundLiveServerCommands.length, COMMANDS.length);
         });
     });
-
-
 });
