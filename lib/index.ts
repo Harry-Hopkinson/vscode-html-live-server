@@ -1,0 +1,1 @@
+console.log("This file helps for locating the live-server folder");
