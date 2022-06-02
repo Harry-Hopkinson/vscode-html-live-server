@@ -21,7 +21,7 @@
       "cors": "^2.8.4",
       "event-stream": "3.3.4",
       "faye-websocket": "0.11.x",
-      "http-auth": "3.2.x",
+      "http-auth": "4.1.x",
       "http-proxy": "^1.16.2",
       "morgan": "^1.9.1",
       "object-assign": "^4.1.1",
