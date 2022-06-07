@@ -332,7 +332,7 @@
   "devDependencies": {
     "@types/mocha": "9.1.1",
     "@types/node": "16.11.39",
-    "husky": "^1.2.1",
+    "husky": "8.0.1",
     "mocha": "^5.0.4",
     "tslint": "^5.11.0",
     "typescript": "^2.9.2",
