@@ -345,7 +345,7 @@
     "ips": "^2.1.3",
     "live-server": "file:lib\\live-server",
     "opn": "^5.5.0",
-    "vsls": "^0.3.967"
+    "vsls": "^1.0.0"
   },
   "announcement": {
     "onVersion": "5.6.1",
